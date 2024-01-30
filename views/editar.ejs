@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Editar Funcionário</title>
+</head>
+
+<body>
+    <h1>Editar Funcionário</h1>
+    <!-- Lógica para preencher os campos com os dados do funcionário a ser editado -->
+    <form action="/funcionarios/editar/:id" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="<%= funcionario.nome %>" required>
+        <br>
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" name="cargo" value="<%= funcionario.cargo %>" required>
+        <br>
+        <label for="salario">Salário:</label>
+        <input type="text" id="salario" name="salario" value="<%= funcionario.salario %>" required>
+        <br>
+        <button type="submit">Salvar Alterações</button>
+    </form>
+</body>
+
+</html>
